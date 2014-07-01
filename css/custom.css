@@ -1,0 +1,28 @@
+/*
+.navbar .breadcrumb {
+    margin: 0 7px;
+    background: none;
+    line-height: 20px;
+}
+
+.navbar .breadcrumb a {
+  color: #777;
+  font-size: 18px;
+}
+.navbar .breadcrumb a:hover,
+.navbar .breadcrumb a:focus {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .navbar .breadcrumb {
+        float: left;
+        margin: 7px 10px;
+    }
+}
+*/
+
+/* Firefox fix for responsive tables  */
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
