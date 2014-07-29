@@ -1,20 +1,38 @@
-<div class="table-responsive">
-  <table class="table table-striped table-hover">
+<!-- <div class="table-responsive"> -->
+  <table id="servers" class="table table-striped table-hover">
     <thead>
       <tr>
-        <th class="hidden-xs">#</th>
         <th>Name</th>
         <th>Address</th>
-        <th>Client 123 123 123 </th>
+        <th>Client</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="hidden-xs">1</td>
-        <td><span class="label label-success">storage01.local</span></td>
-        <td>10.0.0.21</td>
-        <td>president</td>
-      </tr>
+      <script id="template" type="x-tmpl-mustache">        
+        {{#servers}}
+        <tr>
+          <td><span class="label label-success">{{name}}</span></td>
+          <td>{{ip}}</td>
+          <td>{{client}}</td>
+        </tr>
+        {{/servers}}
+      </script>
+
     </tbody>
   </table>
-</div>
+
+  <script>
+    $.getJSON("list.json",function(ret){
+      var template = $('#template').html();
+      //Mustache.parse(template);
+      var rendered = Mustache.render(template, ret);
+      $('#servers').html(rendered);
+      }).done(function(a, b, c) {
+      //  console.log( "success", a, b, c );
+      // })
+    //.fail(function(a, b, c) {
+      //  console.log( "error", a, b, c );
+    });
+  </script>
+
+  <!-- </div> -->
