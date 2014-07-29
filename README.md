@@ -1,7 +1,7 @@
 # Centralized usermanager panel prototype
 ##Common DB structure
 | users |
-| -- |
+| ---- |
 | ID |
 | Name |
 | Alias |
@@ -19,7 +19,7 @@
 | Deleted |
 
 | allowed_networks |
-| -- |
+| ---- |
 | ID |
 | Type |
 | Value |
@@ -30,7 +30,7 @@
 | Deleted |
 
 | servers |
-| -- |
+| ---- |
 | ID |
 | UserID |
 | Name |
@@ -46,7 +46,7 @@
 | AllowedNetworkID |
 
 | logs |
-| -- |
+| ---- |
 | ID |
 | Type |
 | Value |
