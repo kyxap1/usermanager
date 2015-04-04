@@ -1,5 +1,4 @@
-# Centralized usermanager panel prototype
-##Common DB structure
+
 | users |
 | ---- |
 | ID |
